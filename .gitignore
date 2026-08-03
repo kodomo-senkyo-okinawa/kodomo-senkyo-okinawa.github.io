@@ -1,0 +1,36 @@
+# OS・エディタが生成するファイル
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ローカル設定・秘密情報
+.env
+.env.*
+!.env.example
+*.local
+
+# ログ・一時ファイル
+*.log
+*.tmp
+*.temp
+*.pid
+.cache/
+tmp/
+
+# パッケージ・生成物（将来ツールを使った場合もコミットしない）
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+.pytest_cache/
+
+# サイト制作時の内部資料・確認画像
+AGENTS.md
+CONTENT_PLAN.md
+design-qa.md
+qa/
