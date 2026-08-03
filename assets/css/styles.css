@@ -101,8 +101,8 @@ p {
   text-decoration: none;
 }
 .brand img {
-  width: 46px;
-  height: 54px;
+  width: 58px;
+  height: 64px;
   object-fit: contain;
 }
 .brand span {
@@ -110,9 +110,9 @@ p {
   line-height: 1.15;
 }
 .brand strong {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
 }
 .brand small {
   font-size: 12px;
@@ -254,10 +254,16 @@ p {
 }
 .hero h1 {
   margin: 0;
-  font-size: clamp(48px, 4.5vw, 64px);
+  font-size: clamp(46px, 4.1vw, 58px);
   line-height: 1.32;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.02em;
   font-weight: 900;
+}
+.hero-title-line {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
 }
 .hero h1 em {
   font-style: normal;
@@ -308,6 +314,19 @@ p {
 .election-date small {
   font-size: 24px;
   font-weight: 800;
+}
+.election-date-context {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 9px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--blue);
+  background: #e9edff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 .date-red {
   color: var(--red);
@@ -445,14 +464,16 @@ button:focus-visible {
 .photo--okinawa figcaption {
   position: absolute;
   z-index: 1;
-  left: 28px;
-  bottom: 30px;
+  left: 50%;
+  bottom: 42px;
   padding: 8px 12px;
   color: #fff;
   background: rgba(23, 23, 23, 0.62);
   font-weight: 700;
   line-height: 1.55;
-  transform: rotate(-2deg);
+  text-align: center;
+  white-space: nowrap;
+  transform: translateX(-50%) rotate(-2deg);
 }
 .photo--ballot {
   right: 0;
@@ -480,6 +501,300 @@ button:focus-visible {
   bottom: 218px;
   color: var(--blue);
   transform: rotate(-28deg);
+}
+
+.learning-section {
+  padding: 110px 0;
+  background: #edf0ff;
+}
+.learning-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 82px;
+  align-items: center;
+}
+.learning-visual-wrap {
+  min-width: 0;
+}
+.learning-visual {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 58px 34px 44px;
+  border-radius: 38% 38% 46% 46% / 32% 32% 50% 50%;
+  color: var(--yellow);
+  background: var(--blue);
+  text-align: center;
+  transform: rotate(-1deg);
+  box-shadow: 0 22px 50px rgba(0, 40, 255, 0.16);
+}
+.learning-badge {
+  position: absolute;
+  top: 30px;
+  right: -18px;
+  padding: 9px 17px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--yellow);
+  font-size: 13px;
+  font-weight: 900;
+  transform: rotate(5deg);
+}
+.original-book {
+  position: relative;
+  width: 245px;
+  height: 342px;
+  filter: drop-shadow(15px 18px 12px rgba(0, 0, 0, 0.22));
+  transform: rotate(-4deg);
+}
+.original-book::before,
+.original-book::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px 16px 16px 5px;
+  background: #fff;
+}
+.original-book::before {
+  inset: 8px -8px -8px 8px;
+}
+.original-book::after {
+  inset: 4px -4px -4px 4px;
+  border: 1px solid #d8d8d0;
+}
+.original-book-cover {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 28px 20px 18px 26px;
+  border: 4px solid var(--ink);
+  border-radius: 5px 16px 16px 5px;
+  color: var(--ink);
+  background: #fff4c8;
+  text-align: center;
+}
+.original-book-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 10px;
+  background: var(--red);
+}
+.original-book-kicker {
+  padding: 5px 9px;
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  color: var(--blue);
+  background: #fff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+.original-book-cover strong {
+  margin-top: 13px;
+  font-size: 34px;
+  line-height: 1.07;
+  letter-spacing: 0.08em;
+}
+.original-book-cover strong em {
+  color: var(--red);
+  font-size: 1.1em;
+  font-style: normal;
+}
+.original-book-candidates {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  width: 100%;
+  margin-top: 18px;
+}
+.original-book-candidates span {
+  position: relative;
+  height: 68px;
+  border: 3px solid var(--ink);
+  background: #fff;
+}
+.original-book-candidates span::before,
+.original-book-candidates span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.original-book-candidates span::before {
+  top: 9px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.original-book-candidates span::after {
+  bottom: 7px;
+  width: 31px;
+  height: 18px;
+  border-radius: 18px 18px 5px 5px;
+  background: currentColor;
+}
+.original-book-candidates span:nth-child(1) {
+  color: var(--blue);
+  transform: rotate(-2deg);
+}
+.original-book-candidates span:nth-child(2) {
+  color: #e59000;
+  transform: translateY(-5px) rotate(2deg);
+}
+.original-book-candidates span:nth-child(3) {
+  color: var(--red);
+  transform: rotate(-1deg);
+}
+.original-book-candidates span:nth-child(4) {
+  color: #14845c;
+  transform: translateY(-3px) rotate(3deg);
+}
+.original-book-ballot {
+  position: relative;
+  width: 72px;
+  height: 42px;
+  margin-top: 15px;
+  border: 3px solid var(--ink);
+  border-radius: 4px;
+  background: #fff;
+}
+.original-book-ballot::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 13px;
+  width: 40px;
+  border-top: 4px solid var(--ink);
+}
+.original-book-ballot span {
+  position: absolute;
+  top: -25px;
+  left: 24px;
+  color: var(--red);
+  font-size: 32px;
+  font-weight: 900;
+  transform: rotate(-9deg);
+}
+.original-book-cover small {
+  margin-top: auto;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+.learning-copy > p {
+  font-weight: 500;
+}
+.learning-lead {
+  margin: 30px 0 0;
+}
+.learning-book-meta {
+  margin: 7px 0 22px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.learning-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 30px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+.learning-steps li {
+  min-width: 0;
+  padding: 18px 14px;
+  border: 1px solid rgba(0, 40, 255, 0.16);
+  border-radius: 16px;
+  background: #fff;
+}
+.learning-steps li > span {
+  width: 25px;
+  height: 25px;
+  display: inline-grid;
+  place-items: center;
+  margin-right: 7px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+}
+.learning-steps strong {
+  font-size: 17px;
+}
+.learning-steps small {
+  display: block;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+.learning-question {
+  position: relative;
+  margin: 34px 0 38px;
+  padding: 0 0 18px 50px;
+  border: 0;
+  background: transparent;
+}
+.learning-question::before {
+  content: "“";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: var(--yellow);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 82px;
+  font-weight: 900;
+  line-height: 1;
+  transform: rotate(-7deg);
+}
+.learning-question span {
+  display: inline-block;
+  padding: 5px 12px 4px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--yellow);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  transform: rotate(-1deg);
+}
+.learning-question p {
+  position: relative;
+  margin: 12px 0 0;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.7;
+}
+.learning-question p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: min(310px, 82%);
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  transform: rotate(-1deg) skewX(-18deg);
+  opacity: 0.88;
+}
+.learning-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
+.learning-links .text-link {
+  font-size: 13px;
 }
 
 .progress-section {
@@ -652,6 +967,62 @@ button:focus-visible {
 .about-copy p:first-child {
   margin-top: 0;
 }
+.national-story {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 54px;
+  align-items: center;
+  margin-top: 72px;
+  padding: 42px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--paper);
+}
+.national-story h3 {
+  margin: 0;
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.45;
+}
+.national-story-copy > p:not(.eyebrow) {
+  margin: 20px 0 24px;
+  font-weight: 500;
+}
+.awards-card {
+  padding: 28px 30px;
+  border-radius: 22px;
+  background: #fff4c8;
+}
+.awards-card > p {
+  margin: 0 0 14px;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+.awards-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.awards-card li {
+  position: relative;
+  padding: 11px 0 11px 24px;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.16);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.awards-card li:last-child {
+  border-bottom: 0;
+}
+.awards-card li::before {
+  content: "●";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+}
+.awards-card strong {
+  display: block;
+}
 .three-steps {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
@@ -772,25 +1143,58 @@ button:focus-visible {
   font-weight: 700;
   text-align: center;
 }
+.workshop-voices {
+  margin-top: 70px;
+  padding-top: 55px;
+  border-top: 1px solid var(--line);
+}
+.workshop-voices-heading {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: end;
+}
+.workshop-voices-heading .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -22px;
+}
+.workshop-voices-heading h3 {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.45;
+}
+.workshop-voices-heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
 .questions {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-top: 54px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 32px;
   position: relative;
   z-index: 3;
 }
 .sticky {
   margin: 0;
-  min-height: 132px;
+  min-height: 188px;
   display: block;
   align-content: center;
   padding: 24px;
-  font-size: clamp(16px, 1.7vw, 22px);
+  font-size: clamp(14px, 1.35vw, 17px);
   line-height: 1.7;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 13px 23px rgba(0, 0, 0, 0.12);
+}
+.sticky > span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
 }
 .sticky--yellow {
   background: #fff1aa;
@@ -803,6 +1207,10 @@ button:focus-visible {
 .sticky--pink {
   background: #ffd0d4;
   transform: rotate(-1.5deg);
+}
+.sticky--green {
+  background: #d5f2df;
+  transform: rotate(1deg);
 }
 
 .candidates-section {
@@ -911,6 +1319,18 @@ button:focus-visible {
 .vote-copy > p:not(.eyebrow) {
   max-width: 540px;
   font-weight: 500;
+}
+.vote-copy .vote-real-date {
+  width: max-content;
+  max-width: 100%;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--blue);
+  background: #e9edff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.6;
 }
 .vote-copy .button {
   margin-top: 16px;
@@ -1189,6 +1609,71 @@ button:focus-visible {
   color: #4d4d4d;
 }
 
+.committee-section {
+  padding: 110px 0;
+  background: #fff;
+}
+.committee-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 80px;
+  align-items: center;
+}
+.committee-mark {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 36px;
+  border-radius: 42% 42% 48% 48% / 36% 36% 50% 50%;
+  background: #fff4c8;
+  box-shadow: 0 18px 44px rgba(23, 23, 23, 0.08);
+}
+.committee-mark img {
+  width: 210px;
+  height: auto;
+}
+.committee-mark span {
+  margin-top: 18px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+.committee-copy h2 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.45;
+}
+.committee-copy > p:not(.eyebrow) {
+  margin: 24px 0 30px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.committee-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.committee-points article {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+}
+.committee-points strong {
+  color: var(--blue);
+  font-size: 15px;
+}
+.committee-points p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
 .policy-section {
   padding: 110px 0;
   background: var(--blue);
@@ -1230,6 +1715,11 @@ button:focus-visible {
   color: #fff;
   border-color: #fff;
 }
+.policy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 30px;
+}
 
 .site-footer {
   padding: 68px 0 32px;
@@ -1247,10 +1737,9 @@ button:focus-visible {
   gap: 20px;
 }
 .footer-brand img {
-  width: 74px;
-  height: 88px;
+  width: 100px;
+  height: 124px;
   object-fit: contain;
-  padding: 5px;
   background: #fff;
   border-radius: 12px;
 }
@@ -1296,10 +1785,10 @@ button:focus-visible {
 
 @media (max-width: 1080px) {
   .desktop-nav {
-    gap: 16px;
+    gap: 12px;
   }
   .desktop-nav a {
-    font-size: 12px;
+    font-size: 11px;
   }
   .hero-inner {
     grid-template-columns: 1fr 1fr;
@@ -1309,7 +1798,7 @@ button:focus-visible {
     padding-left: 0;
   }
   .hero h1 {
-    font-size: 42px;
+    font-size: 40px;
   }
   .hero-inner {
     min-height: 500px;
@@ -1463,12 +1952,23 @@ button:focus-visible {
     margin: 0;
   }
   .about-intro,
+  .national-story,
+  .learning-grid,
   .report-grid,
   .vote-grid,
   .faq-grid,
+  .committee-grid,
   .policy-card {
     grid-template-columns: 1fr;
     gap: 38px;
+  }
+  .national-story {
+    padding: 34px;
+  }
+  .learning-visual {
+    width: min(430px, 88%);
+    min-height: 440px;
+    margin-inline: auto;
   }
   .about-copy {
     font-size: 16px;
@@ -1488,6 +1988,11 @@ button:focus-visible {
   .faq-grid {
     gap: 48px;
   }
+  .committee-mark {
+    width: min(430px, 88%);
+    min-height: 430px;
+    margin-inline: auto;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -1502,11 +2007,12 @@ button:focus-visible {
     scroll-padding-top: 76px;
   }
   .brand img {
-    width: 38px;
-    height: 45px;
+    width: 46px;
+    height: 52px;
   }
   .brand strong {
-    font-size: 13px;
+    font-size: 10px;
+    letter-spacing: 0;
   }
   .brand small {
     font-size: 10px;
@@ -1530,7 +2036,7 @@ button:focus-visible {
     font-size: 12px;
   }
   .hero h1 {
-    font-size: clamp(31px, 9vw, 38px);
+    font-size: clamp(29px, 8.5vw, 37px);
     line-height: 1.42;
     letter-spacing: 0;
   }
@@ -1577,8 +2083,8 @@ button:focus-visible {
     bottom: 2px;
   }
   .photo--okinawa figcaption {
-    left: 16px;
-    bottom: 18px;
+    left: 50%;
+    bottom: 32px;
     font-size: 12px;
   }
   .mark--red {
@@ -1618,12 +2124,84 @@ button:focus-visible {
     left: 55px;
   }
   .about-section,
+  .learning-section,
   .report-section,
   .vote-section,
   .news-section,
   .faq-section,
+  .committee-section,
   .policy-section {
     padding: 78px 0;
+  }
+  .national-story {
+    width: calc(100% - 24px);
+    margin-top: 52px;
+    padding: 24px 18px;
+  }
+  .national-story h3 {
+    font-size: 30px;
+  }
+  .awards-card {
+    padding: 22px 18px;
+  }
+  .learning-grid {
+    gap: 50px;
+  }
+  .learning-visual {
+    width: calc(100% - 18px);
+    min-height: 370px;
+    padding: 48px 24px 34px;
+  }
+  .learning-badge {
+    top: 20px;
+    right: -8px;
+  }
+  .original-book {
+    width: 213px;
+    height: 298px;
+  }
+  .original-book-cover {
+    padding: 23px 16px 14px 22px;
+  }
+  .original-book-cover strong {
+    font-size: 29px;
+  }
+  .original-book-candidates {
+    gap: 5px;
+    margin-top: 14px;
+  }
+  .original-book-candidates span {
+    height: 57px;
+  }
+  .original-book-candidates span::before {
+    width: 21px;
+    height: 21px;
+  }
+  .original-book-candidates span::after {
+    width: 26px;
+    height: 15px;
+  }
+  .original-book-ballot {
+    margin-top: 11px;
+  }
+  .learning-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .learning-steps {
+    grid-template-columns: 1fr;
+  }
+  .learning-steps li {
+    display: grid;
+    grid-template-columns: 28px 62px 1fr;
+    align-items: center;
+    gap: 8px;
+  }
+  .learning-steps li > span {
+    margin: 0;
+  }
+  .learning-steps small {
+    margin: 0;
   }
   .section-title h2 {
     font-size: 34px;
@@ -1658,9 +2236,21 @@ button:focus-visible {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+  .workshop-voices {
+    margin-top: 52px;
+    padding-top: 42px;
+  }
+  .workshop-voices-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .workshop-voices-heading .eyebrow {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
   .sticky {
-    min-height: 105px;
-    font-size: 17px;
+    min-height: 150px;
+    font-size: 15px;
   }
   .sticky--yellow {
     transform: rotate(-1deg);
@@ -1670,6 +2260,9 @@ button:focus-visible {
   }
   .sticky--pink {
     transform: rotate(-0.5deg);
+  }
+  .sticky--green {
+    transform: rotate(0.5deg);
   }
   .candidates-section {
     padding-bottom: 78px;
@@ -1759,6 +2352,20 @@ button:focus-visible {
   .faq-answer {
     padding-left: 42px;
     font-size: 14px;
+  }
+  .committee-mark {
+    width: calc(100% - 18px);
+    min-height: 390px;
+    padding: 28px;
+  }
+  .committee-mark img {
+    width: 190px;
+  }
+  .committee-copy h2 {
+    font-size: 33px;
+  }
+  .committee-points {
+    grid-template-columns: 1fr;
   }
   .policy-card {
     gap: 32px;
