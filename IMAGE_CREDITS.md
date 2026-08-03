@@ -4,18 +4,18 @@
 
 ## 2026年ワークショップ写真
 
-- `public/assets/images/2026/01.jpeg`: 会場外観、SNS共有用プレビュー
-- `public/assets/images/2026/02.jpeg`: 子どもたちの話し合い、ファーストビュー
-- `public/assets/images/2026/03.jpeg`: 本物の投票箱を使った模擬投票、ファーストビュー
-- `public/assets/images/2026/04.jpeg`: グループでの質問づくり、活動レポート
-- `public/assets/images/2026/05.jpeg`: 付箋を使った質問づくり、活動レポート
-- `public/assets/images/2026/06.jpeg`: 投票箱へ一票を入れる様子、ファーストビュー
+- `assets/images/2026/01.jpeg`: 会場外観、SNS共有用プレビュー
+- `assets/images/2026/02.jpeg`: 子どもたちの話し合い、ファーストビュー
+- `assets/images/2026/03.jpeg`: 本物の投票箱を使った模擬投票、ファーストビュー
+- `assets/images/2026/04.jpeg`: グループでの質問づくり、活動レポート
+- `assets/images/2026/05.jpeg`: 付箋を使った質問づくり、活動レポート
+- `assets/images/2026/06.jpeg`: 投票箱へ一票を入れる様子、ファーストビュー
 
-いずれも本プロジェクトの`public/assets/images/2026`フォルダから使用しています。
+いずれも本プロジェクトの `assets/images/2026` フォルダから使用しています。
 
 ## ロゴ
 
-- `public/assets/images/kodomo-senkyo-logo.svg`
+- `assets/images/kodomo-senkyo-logo.svg`
   - 出典: [全国こども選挙公式サイト](https://kodomo-senkyo.com/)
   - 全国こども選挙実行委員会は各地域で使うロゴ・制作物を共有する方針を公開しています。
   - 正式な「おきなわ」地域ロゴが提供された場合は差し替えてください。
