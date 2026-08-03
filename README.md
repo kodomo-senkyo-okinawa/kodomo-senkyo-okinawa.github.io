@@ -5,23 +5,23 @@
 ## アーキテクチャ
 
 - 配信: GitHub Pages
-- 公開ディレクトリ: `docs/`
+- 公開ディレクトリ: `public/`
 - 技術: HTML5、CSS3、Vanilla JavaScript
-- デプロイ: `main`ブランチへのpushを契機にGitHub Actionsが`docs/`をそのまま公開
+- デプロイ: `main`ブランチへのpushを契機にGitHub Actionsが`public/`をそのまま公開
 
 ビルド処理、Node.js、npm、React、Vite、サーバー、Worker、データベースは使用しません。
 
 ## ファイル構成
 
-- `docs/index.html`: ページの本文と構造
-- `docs/styles.css`: レイアウトとデザイン
-- `docs/app.js`: ふりがな、モバイルメニュー、FAQの操作
-- `docs/images/2026/`: 公式ワークショップ写真
+- `public/index.html`: ページの本文と構造
+- `public/assets/css/styles.css`: レイアウトとデザイン
+- `public/assets/js/app.js`: ふりがな、モバイルメニュー、FAQの操作
+- `public/assets/images/2026/`: 公式ワークショップ写真
 
 ## ローカル確認
 
 ```bash
-python3 -m http.server 4173 -d docs
+python3 -m http.server 4173 -d public
 ```
 
 公開画像の出典は `IMAGE_CREDITS.md` を参照してください。
