@@ -20,3 +20,8 @@
   - 全国こども選挙の地域名入りロゴとして、提供データを変形・色変更せず使用しています。
 - `assets/images/kodomo-senkyo-logo.svg`
   - 旧ロゴデータ。現在の表示には使用していません。
+
+## QRコード
+
+- `assets/images/instagram-qr.png`
+  - おきなわこども選挙公式Instagram（`https://www.instagram.com/okinawa.kodomo_senkyo`）へのリンク用として生成。
