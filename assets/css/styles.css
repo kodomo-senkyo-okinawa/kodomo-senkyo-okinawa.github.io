@@ -1961,6 +1961,17 @@ button:focus-visible {
   color: #aaa;
   font-size: 13px;
 }
+.footer-brand .footer-contact {
+  margin-top: 10px;
+}
+.footer-contact a {
+  color: #ddd;
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+.footer-contact a:hover {
+  color: var(--yellow);
+}
 .footer-grid nav {
   display: grid;
   grid-template-columns: repeat(2, auto);
