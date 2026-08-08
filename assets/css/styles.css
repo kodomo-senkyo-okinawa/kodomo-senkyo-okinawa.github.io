@@ -1844,8 +1844,6 @@ button:focus-visible {
   font-size: 13px;
 }
 .founder-message {
-  display: grid;
-  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
   margin-top: 72px;
   overflow: hidden;
   border: 1px solid #d2e3de;
@@ -1853,44 +1851,30 @@ button:focus-visible {
   background: linear-gradient(120deg, #eaf5f2 0%, #fff5df 100%);
   box-shadow: var(--shadow-soft);
 }
+.founder-intro {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+  align-items: stretch;
+}
 .founder-portrait {
-  position: relative;
-  min-height: 100%;
   margin: 0;
   overflow: hidden;
   background: #d6e7e2;
 }
 .founder-portrait img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
 }
-.founder-portrait figcaption {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 6px 20px rgba(23, 23, 23, 0.12);
-  font-size: 11px;
-  font-weight: 800;
-}
-.founder-portrait figcaption a {
-  color: var(--ink);
-  text-decoration: none;
-}
-.founder-portrait figcaption a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.founder-copy {
+.founder-heading {
   position: relative;
-  padding: 48px 54px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px 54px;
 }
-.founder-copy::before {
+.founder-heading::before {
   content: "“";
   position: absolute;
   top: 24px;
@@ -1908,13 +1892,13 @@ button:focus-visible {
   font-weight: 900;
   letter-spacing: 0.08em;
 }
-.founder-copy h3 {
+.founder-heading h3 {
   position: relative;
   margin: 0;
   font-size: 20px;
   line-height: 1.5;
 }
-.founder-copy h3 span {
+.founder-heading h3 span {
   margin-right: 6px;
   font-size: clamp(28px, 3.3vw, 40px);
   font-weight: 900;
@@ -1928,14 +1912,19 @@ button:focus-visible {
   font-weight: 900;
   line-height: 1.65;
 }
-.founder-copy > p:not(.founder-role):not(.founder-message-lead) {
+.founder-body {
+  padding: 38px 54px 46px;
+  border-top: 1px solid rgba(18, 107, 120, 0.12);
+  background: rgba(255, 255, 255, 0.36);
+}
+.founder-body > p {
   margin: 0;
   color: #4d5f64;
   font-size: 14px;
   font-weight: 500;
   line-height: 2;
 }
-.founder-copy > p + p:not(.founder-message-lead) {
+.founder-body > p + p {
   margin-top: 12px;
 }
 
@@ -2209,11 +2198,14 @@ button:focus-visible {
   .instagram-panel {
     margin-top: 52px;
   }
-  .founder-message {
+  .founder-intro {
     grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
   }
-  .founder-copy {
-    padding: 40px 36px 42px;
+  .founder-heading {
+    padding: 40px 36px;
+  }
+  .founder-body {
+    padding: 34px 36px 40px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -2608,27 +2600,32 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
   .founder-message {
-    grid-template-columns: 1fr;
     margin-top: 52px;
     border-radius: 24px;
+  }
+  .founder-intro {
+    grid-template-columns: 1fr;
   }
   .founder-portrait img {
     height: auto;
     aspect-ratio: auto;
   }
-  .founder-copy {
-    padding: 32px 22px 34px;
+  .founder-heading {
+    padding: 32px 22px 30px;
   }
-  .founder-copy::before {
+  .founder-heading::before {
     top: 20px;
     right: 18px;
     font-size: 96px;
   }
-  .founder-copy h3 span {
+  .founder-heading h3 span {
     font-size: 30px;
   }
   .founder-message-lead {
     font-size: 23px;
+  }
+  .founder-body {
+    padding: 28px 22px 34px;
   }
   .footer-grid nav {
     grid-template-columns: 1fr;
