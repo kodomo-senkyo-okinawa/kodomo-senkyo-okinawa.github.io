@@ -387,6 +387,9 @@ p {
   font-weight: 800;
   line-height: 1.55;
 }
+.venue-info__unit {
+  white-space: nowrap;
+}
 .venue-info a {
   display: inline-flex;
   grid-column: 2;
