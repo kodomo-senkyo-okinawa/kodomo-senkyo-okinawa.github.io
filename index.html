@@ -29,11 +29,21 @@
       as="image"
       href="./assets/images/okinawa-kodomo-senkyo-logo.png"
     />
-    <link rel="preload" as="image" href="./assets/images/2026/02.jpeg" />
-    <link rel="preload" as="image" href="./assets/images/2026/03.jpeg" />
-    <link rel="preload" as="image" href="./assets/images/2026/06.jpeg" />
-    <link rel="preload" as="image" href="./assets/images/2026/04.jpeg" />
-    <link rel="preload" as="image" href="./assets/images/2026/05.jpeg" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/2026/01.jpeg?v=20260808-1"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/2026/08.jpeg?v=20260808-1"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/2026/04.jpeg?v=20260808-1"
+    />
   </head>
   <body>
     <a class="skip-link" href="#main"
@@ -261,6 +271,50 @@
                 ></span
               >
             </div>
+            <div class="venue-info">
+              <span class="venue-info__icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M128,24a88.1,88.1,0,0,0-88,88c0,75.45,80,119.31,83.4,121.14a9.59,9.59,0,0,0,9.2,0C136,231.31,216,187.45,216,112A88.1,88.1,0,0,0,128,24Zm0,120a32,32,0,1,1,32-32A32,32,0,0,1,128,144Z"
+                  ></path>
+                </svg>
+              </span>
+              <div class="venue-info__body">
+                <span class="venue-info__label"
+                  ><ruby>投票会場<rt>とうひょうかいじょう</rt></ruby></span
+                >
+                <p>
+                  サンエー <ruby>浦添西海岸<rt>うらそえにしかいがん</rt></ruby
+                  >パルコシティ 4<ruby>階<rt>かい</rt></ruby
+                  >A<ruby>区画<rt>くかく</rt></ruby>
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B5%E3%83%B3%E3%82%A8%E3%83%BC%E6%B5%A6%E6%B7%BB%E8%A5%BF%E6%B5%B7%E5%B2%B8PARCO%20CITY"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Google Mapで<ruby>見<rt>み</rt></ruby
+                  >る
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M216,40H152a8,8,0,0,0,0,16h44.69L130.34,122.34a8,8,0,0,0,11.32,11.32L208,67.31V112a8,8,0,0,0,16,0V48A8,8,0,0,0,216,40ZM176,88a8,8,0,0,0-8,8v88H72V88h88a8,8,0,0,0,0-16H64a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H176a8,8,0,0,0,8-8V96A8,8,0,0,0,176,88Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
           <div
             class="hero-visual"
@@ -281,8 +335,10 @@
             </svg>
             <figure class="photo photo--workshop">
               <img
-                src="./assets/images/2026/02.jpeg"
-                alt="質問づくりワークショップで話し合う子どもたち"
+                src="./assets/images/2026/01.jpeg?v=20260808-1"
+                alt="会場全体で候補者への質問を話し合う子どもたち"
+                width="1280"
+                height="720"
               />
               <figcaption class="photo-label">
                 7<ruby>月<rt>がつ</rt></ruby
@@ -292,8 +348,10 @@
             </figure>
             <figure class="photo photo--okinawa">
               <img
-                src="./assets/images/2026/03.jpeg"
-                alt="本物の投票箱を使った模擬投票を体験する子ども"
+                src="./assets/images/2026/08.jpeg?v=20260808-1"
+                alt="本物の投票箱へ投票用紙を入れる子どもたち"
+                width="960"
+                height="1280"
               />
               <figcaption>
                 <ruby>本物<rt>ほんもの</rt></ruby
@@ -304,8 +362,10 @@
             </figure>
             <figure class="photo photo--ballot">
               <img
-                src="./assets/images/2026/06.jpeg"
-                alt="投票箱へ投票用紙を入れる子どもの手元"
+                src="./assets/images/2026/04.jpeg?v=20260808-1"
+                alt="候補者への質問について話し合う参加者たち"
+                width="1280"
+                height="960"
               />
             </figure>
             <svg
@@ -889,7 +949,7 @@
               >えました。
             </p>
             <a
-              class="button button--outline"
+              class="button button--outline button--media"
               href="https://newsdig.tbs.co.jp/articles/rbc/2840409?display=1"
               target="_blank"
               rel="noreferrer"
@@ -914,8 +974,11 @@
           >
             <figure class="report-photo report-photo--discussion">
               <img
-                src="./assets/images/2026/04.jpeg"
+                src="./assets/images/2026/02.jpeg?v=20260808-1"
                 alt="付箋を使って候補者への質問を考える子どもたち"
+                width="1280"
+                height="720"
+                loading="lazy"
               />
               <figcaption>
                 グループで<ruby>質問<rt>しつもん</rt></ruby
@@ -925,8 +988,11 @@
             </figure>
             <figure class="report-photo report-photo--closeup">
               <img
-                src="./assets/images/2026/05.jpeg"
-                alt="候補者への質問を付箋に書き出す参加者"
+                src="./assets/images/2026/06.jpeg?v=20260808-1"
+                alt="付箋に書いた質問を整理する参加者たち"
+                width="960"
+                height="1280"
+                loading="lazy"
               />
               <figcaption>
                 <ruby>一人<rt>ひとり</rt></ruby
@@ -935,20 +1001,19 @@
                 >にする
               </figcaption>
             </figure>
-            <figure class="report-photo report-photo--reading">
+            <figure class="report-photo report-photo--presentation">
               <img
-                src="./assets/images/2026/07.JPG"
-                alt="絵本を一緒に読みながら模擬投票について考える参加者"
+                src="./assets/images/2026/03.jpeg?v=20260808-1"
+                alt="みんなの前で候補者への質問を発表する参加者"
                 width="1280"
                 height="720"
                 loading="lazy"
               />
               <figcaption>
-                <ruby>絵本<rt>えほん</rt></ruby
-                >を<ruby>読<rt>よ</rt></ruby
-                >みながら<ruby>考<rt>かんが</rt></ruby
-                >えを<ruby>深<rt>ふか</rt></ruby
-                >める
+                みんなの<ruby>前<rt>まえ</rt></ruby
+                >で<ruby>質問<rt>しつもん</rt></ruby
+                >を<ruby>発表<rt>はっぴょう</rt></ruby
+                >する
               </figcaption>
             </figure>
           </div>

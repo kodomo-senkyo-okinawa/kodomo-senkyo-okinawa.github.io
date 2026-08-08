@@ -338,6 +338,73 @@ p {
 .date-red {
   color: var(--red);
 }
+.venue-info {
+  width: min(550px, 100%);
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 12px;
+  padding: 11px 14px;
+  border: 1px solid rgba(18, 107, 120, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 254, 250, 0.88);
+  box-shadow: 0 10px 26px rgba(18, 72, 80, 0.08);
+}
+.venue-info__icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--yellow);
+}
+.venue-info__icon svg {
+  width: 20px;
+  height: 20px;
+}
+.venue-info__body {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 16px;
+  align-items: center;
+}
+.venue-info__label {
+  display: block;
+  grid-column: 1;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.venue-info p {
+  grid-column: 1;
+  margin: 2px 0 3px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+.venue-info a {
+  display: inline-flex;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-items: center;
+  gap: 5px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  text-underline-offset: 3px;
+}
+.venue-info a:hover {
+  color: var(--blue-dark);
+}
+.venue-info a svg {
+  width: 14px;
+  height: 14px;
+}
 .button {
   min-height: 58px;
   display: inline-flex;
@@ -386,6 +453,33 @@ button:focus-visible {
   background: #fff;
   font-size: 14px;
 }
+.button--media {
+  min-height: 64px;
+  padding: 14px 17px 14px 29px;
+  color: #fff;
+  border: 2px solid var(--blue);
+  background: var(--blue);
+  box-shadow: 0 12px 26px rgba(18, 107, 120, 0.24);
+  font-size: 16px;
+}
+.button--media > svg {
+  width: 38px;
+  height: 38px;
+  margin-left: 21px;
+  padding: 9px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--yellow);
+  transition: transform 0.2s ease;
+}
+.button--media:hover {
+  border-color: var(--blue-dark);
+  background: var(--blue-dark);
+  box-shadow: 0 16px 32px rgba(11, 79, 92, 0.3);
+}
+.button--media:hover > svg {
+  transform: translateX(3px);
+}
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -426,7 +520,7 @@ button:focus-visible {
   border-radius: 42% 42% 44% 44% / 35% 35% 55% 55%;
 }
 .photo--workshop img {
-  object-position: center;
+  object-position: center 52%;
 }
 .photo-label {
   position: absolute;
@@ -453,7 +547,7 @@ button:focus-visible {
   border: 8px solid var(--paper);
 }
 .photo--okinawa img {
-  object-position: center;
+  object-position: center 45%;
 }
 .photo--okinawa::after {
   content: "";
@@ -484,7 +578,7 @@ button:focus-visible {
   border-radius: 50%;
 }
 .photo--ballot img {
-  object-position: center 64%;
+  object-position: center 48%;
 }
 .mark {
   position: absolute;
@@ -1084,18 +1178,20 @@ button:focus-visible {
 .report-photo--discussion img {
   aspect-ratio: 4/3;
   border-radius: 28px 28px 28px 70px;
+  object-position: center 50%;
 }
 .report-photo--closeup img {
   aspect-ratio: 3/4;
   border-radius: 28px 70px 28px 28px;
+  object-position: center 42%;
 }
-.report-photo--reading {
+.report-photo--presentation {
   grid-column: 1 / -1;
 }
-.report-photo--reading img {
+.report-photo--presentation img {
   aspect-ratio: 3.25 / 1;
   border-radius: 28px 28px 70px 28px;
-  object-position: center 52%;
+  object-position: center 48%;
 }
 .report-photo figcaption {
   position: absolute;
@@ -2172,6 +2268,14 @@ button:focus-visible {
   .election-date small {
     font-size: 19px;
   }
+  .venue-info__body {
+    grid-template-columns: 1fr;
+  }
+  .venue-info a {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 3px;
+  }
   .button--primary {
     min-width: 0;
     width: 100%;
@@ -2346,7 +2450,7 @@ button:focus-visible {
   .report-photo--closeup img {
     border-radius: 18px 42px 18px 18px;
   }
-  .report-photo--reading img {
+  .report-photo--presentation img {
     aspect-ratio: 16 / 9;
     border-radius: 18px 18px 42px 18px;
     object-position: center;
