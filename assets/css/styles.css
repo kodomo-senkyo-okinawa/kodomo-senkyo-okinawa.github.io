@@ -322,6 +322,16 @@ p {
   font-size: 24px;
   font-weight: 800;
 }
+.election-date-time {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 10px;
+  color: var(--red);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
 .election-date-context {
   display: block;
   width: max-content;
