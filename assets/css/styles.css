@@ -2249,9 +2249,6 @@ button:focus-visible {
     width: calc(100% - 24px);
     gap: 8px;
   }
-  .furigana-toggle > span:first-child {
-    display: none;
-  }
   .hero {
     padding-top: 34px;
   }
