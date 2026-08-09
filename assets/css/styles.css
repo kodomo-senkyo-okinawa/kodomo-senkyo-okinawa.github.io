@@ -1856,6 +1856,70 @@ button:focus-visible {
 .committee-network-copy .text-link {
   font-size: 13px;
 }
+.committee-members {
+  margin-top: 72px;
+}
+.committee-members-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+.committee-members-heading h3 {
+  margin: 0;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.4;
+}
+.committee-members-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+.committee-members-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid #ead0c3;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fffaf5;
+  box-shadow: var(--shadow-soft);
+}
+.committee-member {
+  position: relative;
+  min-height: 176px;
+  padding: 26px 30px 28px;
+  border-bottom: 1px solid #ead0c3;
+}
+.committee-member:nth-child(odd) {
+  border-right: 1px solid #ead0c3;
+}
+.committee-member:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+.committee-member-chair {
+  background: #fff2e7;
+}
+.committee-member-role {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.committee-member h4 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.committee-member-affiliation {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.75;
+}
 .founder-message {
   margin-top: 72px;
   overflow: hidden;
@@ -2218,6 +2282,10 @@ button:focus-visible {
     width: min(430px, 88%);
     min-height: 430px;
     margin-inline: auto;
+  }
+  .committee-members-heading {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   .instagram-panel {
     margin-top: 52px;
@@ -2619,6 +2687,34 @@ button:focus-visible {
   }
   .committee-policy-list {
     grid-template-columns: 1fr;
+  }
+  .committee-members {
+    margin-top: 52px;
+  }
+  .committee-members-list {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+  .committee-member {
+    min-height: 0;
+    padding: 22px;
+    border-right: 0;
+    border-bottom: 1px solid #ead0c3;
+  }
+  .committee-member:nth-child(odd) {
+    border-right: 0;
+  }
+  .committee-member:nth-last-child(2) {
+    border-bottom: 1px solid #ead0c3;
+  }
+  .committee-member:last-child {
+    border-bottom: 0;
+  }
+  .committee-member h4 {
+    font-size: 22px;
+  }
+  .committee-member-affiliation {
+    font-size: 13px;
   }
   .founder-message {
     margin-top: 52px;
