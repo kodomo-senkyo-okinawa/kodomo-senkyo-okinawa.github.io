@@ -45,6 +45,21 @@
     });
   });
 
+  document.querySelectorAll(".candidate-video-poster").forEach((button) => {
+    button.addEventListener("click", () => {
+      const videoId = button.dataset.youtubeId;
+      if (!videoId) return;
+
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&playsinline=1&rel=0`;
+      iframe.title = button.dataset.videoTitle || "候補者の回答動画";
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      button.replaceWith(iframe);
+    });
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeMenu();
   });

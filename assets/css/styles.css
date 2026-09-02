@@ -1514,6 +1514,19 @@ button:focus-visible {
   border: 2px solid rgba(23, 50, 59, 0.12);
   background: var(--yellow);
 }
+.rules-video-embed {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 2px solid rgba(23, 50, 59, 0.12);
+  border-radius: 18px;
+  background: var(--ink);
+}
+.rules-video-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .video-status span {
   font-size: 20px;
   font-weight: 900;
@@ -1592,6 +1605,74 @@ button:focus-visible {
 }
 .candidate-answer-card .video-status {
   aspect-ratio: 4 / 5;
+}
+.candidate-video-embed {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  border: 2px solid rgba(23, 50, 59, 0.12);
+  border-radius: 18px;
+  background: var(--ink);
+}
+.candidate-video-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.candidate-video-poster {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  color: var(--white);
+  background: var(--ink);
+  cursor: pointer;
+}
+.candidate-video-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.candidate-video-poster::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 30%;
+  background: linear-gradient(transparent, rgba(8, 29, 36, 0.7));
+  pointer-events: none;
+}
+.candidate-video-play {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--white);
+  background: rgba(8, 29, 36, 0.88);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+.candidate-video-play::before {
+  content: "▶";
+  font-size: 9px;
+}
+.candidate-video-poster:hover .candidate-video-play {
+  background: var(--blue);
+}
+.candidate-video-poster:focus-visible {
+  outline: 4px solid var(--yellow);
+  outline-offset: -4px;
 }
 .answers-policy {
   padding: 70px 0 86px;
