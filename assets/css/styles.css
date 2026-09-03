@@ -3,6 +3,7 @@
   --blue-dark: #0b4f5c;
   --yellow: #f2bb4f;
   --red: #c94a3f;
+  --video-frame: #83a8ae;
   --ink: #17323b;
   --muted: #5e6b70;
   --paper: #f7f5ef;
@@ -1517,7 +1518,7 @@ button:focus-visible {
 .rules-video-embed {
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  border: 2px solid rgba(23, 50, 59, 0.12);
+  border: 2px solid var(--video-frame);
   border-radius: 18px;
   background: var(--ink);
 }
@@ -1568,6 +1569,14 @@ button:focus-visible {
   line-height: 1.65;
   letter-spacing: 0.025em;
 }
+.recording-notice {
+  max-width: 1040px;
+  margin: -10px 0 30px;
+  color: rgba(23, 50, 59, 0.78);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.8;
+}
 .candidate-answer-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1610,7 +1619,7 @@ button:focus-visible {
   position: relative;
   overflow: hidden;
   aspect-ratio: 9 / 16;
-  border: 2px solid rgba(23, 50, 59, 0.12);
+  border: 2px solid var(--video-frame);
   border-radius: 18px;
   background: var(--ink);
 }
@@ -1754,6 +1763,11 @@ button:focus-visible {
   }
   .answer-question h2 {
     font-size: 23px;
+  }
+  .recording-notice {
+    margin: -8px 0 24px;
+    font-size: 12px;
+    line-height: 1.7;
   }
   .candidate-answer-grid {
     grid-template-columns: repeat(2, 1fr);
