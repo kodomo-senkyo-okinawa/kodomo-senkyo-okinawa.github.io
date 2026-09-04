@@ -2019,26 +2019,6 @@ button:focus-visible {
   color: var(--blue-dark);
   text-decoration-color: currentColor;
 }
-.media-table__title .media-table__video-link {
-  display: flex;
-  width: fit-content;
-  align-items: center;
-  gap: 7px;
-  margin-top: 8px;
-  color: #9b342d;
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.6;
-  text-decoration-color: rgba(155, 52, 45, 0.32);
-}
-.media-table__video-link::before {
-  content: "▶";
-  font-size: 10px;
-  line-height: 1;
-}
-.media-table__title .media-table__video-link:hover {
-  color: #77231e;
-}
 .media-table__title a:focus-visible,
 .media-more-button:focus-visible {
   outline: 3px solid var(--blue);
