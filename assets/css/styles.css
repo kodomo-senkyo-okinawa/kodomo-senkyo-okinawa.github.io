@@ -2015,6 +2015,13 @@ button:focus-visible {
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
+.media-table__title-text {
+  display: inline-block;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.75;
+}
 .media-table__title a:hover {
   color: var(--blue-dark);
   text-decoration-color: currentColor;
@@ -2957,6 +2964,12 @@ button:focus-visible {
     margin-bottom: 4px;
   }
   .media-table__title a {
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.72;
+    overflow-wrap: anywhere;
+  }
+  .media-table__title-text {
     min-width: 0;
     font-size: 14px;
     line-height: 1.72;
