@@ -253,13 +253,16 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(430px, 0.98fr);
   gap: 28px;
-  align-items: start;
+  align-items: center;
   min-height: 580px;
 }
 .hero-copy {
   padding-left: 20px;
   position: relative;
   z-index: 2;
+}
+.hero-results-link {
+  margin-top: 32px;
 }
 .hero-kicker {
   margin: 0 0 24px;
@@ -1844,6 +1847,34 @@ button:focus-visible {
 .vote-copy .button {
   margin-top: 16px;
 }
+.vote-results-totals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+}
+.vote-results-totals > div {
+  padding: 34px 16px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  text-align: center;
+}
+.vote-results-totals dt {
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 800;
+}
+.vote-results-totals dd {
+  margin: 14px 0 0;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.4;
+}
+.vote-results-totals small {
+  margin-left: 5px;
+  font-size: 20px;
+}
 .vote-message {
   min-height: 410px;
   display: flex;
@@ -2226,6 +2257,144 @@ button:focus-visible {
   font-weight: 800;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
+}
+
+/* Result announcement: preserve the supplied artwork's complete 4:5 canvas. */
+.results-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 32px;
+}
+.results-intro p:first-child {
+  margin-top: 0;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 800;
+}
+.results-page .results-figure {
+  margin: 0;
+}
+.results-page .results-figure a {
+  display: block;
+  border-radius: 12px;
+}
+.results-page .results-figure img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+.results-page h3 {
+  margin: 30px 0 18px;
+  font-size: 20px;
+  line-height: 1.7;
+}
+.results-summary-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 560px;
+  margin: 24px auto 32px;
+}
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.results-table th,
+.results-table td {
+  padding: 15px 20px;
+  border: 1px solid var(--line);
+}
+.results-table th {
+  text-align: left;
+  font-weight: 700;
+}
+.results-table td,
+.results-table thead th:not(:first-child) {
+  text-align: right;
+  white-space: nowrap;
+}
+.results-table thead,
+.results-table tfoot {
+  background: var(--sky-soft);
+}
+.results-table tfoot {
+  font-weight: 800;
+}
+.results-note,
+.results-source {
+  color: var(--muted);
+  font-size: 13px;
+}
+.results-source a {
+  color: var(--blue);
+  text-underline-offset: 4px;
+}
+.results-page .results-figure--narrow {
+  max-width: 440px;
+  margin: 28px auto;
+}
+.results-letter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+  margin: 28px 0;
+}
+.results-letter-item {
+  min-width: 0;
+}
+.results-letter-item h3 {
+  min-height: 3.4em;
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.results-page .results-figure--closing {
+  max-width: 280px;
+  margin: 28px auto;
+}
+@media (max-width: 650px) {
+  .results-page .news-detail-header h1 {
+    font-size: clamp(24px, 6.5vw, 30px);
+  }
+  .results-intro,
+  .results-letter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .results-intro > .results-figure {
+    width: min(300px, 100%);
+    margin-inline: auto;
+  }
+  .results-summary-images {
+    gap: 12px;
+  }
+  .results-letter-item h3 {
+    min-height: 0;
+  }
+  .results-table {
+    font-size: 14px;
+  }
+  .results-table th,
+  .results-table td {
+    padding: 12px 9px;
+  }
+  .results-table tbody th {
+    width: 45%;
+  }
+  .vote-results-totals {
+    gap: 12px;
+  }
+  .vote-results-totals > div {
+    padding: 24px 10px;
+  }
 }
 
 .faq-section {
