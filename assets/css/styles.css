@@ -480,10 +480,13 @@ button:focus-visible {
 .button--results {
   width: min(100%, 440px);
   min-width: 0;
-  min-height: 88px;
+  min-height: 120px;
   justify-content: center;
+  flex-direction: column;
+  gap: 4px;
   padding: 14px 24px;
   border: 2px solid #e7ad39;
+  border-radius: 16px;
   color: var(--ink);
   background: linear-gradient(115deg, #ffe9a8 0%, #f7cf6f 50%, var(--yellow) 100%);
   box-shadow: 0 5px 0 #ce982f, 0 16px 30px rgba(166, 111, 24, 0.25);
@@ -491,8 +494,23 @@ button:focus-visible {
   font-weight: 900;
 }
 .button--results > span {
-  flex: 1;
+  display: block;
   text-align: center;
+}
+.button--results .results-button-context {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.button--results .results-button-election {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+.button--results .results-button-action {
+  font-size: 24px;
+  line-height: 1.4;
 }
 .button--results:hover {
   color: var(--ink);
@@ -1032,6 +1050,18 @@ button:focus-visible {
 .progress-item strong {
   margin-top: 11px;
   font-size: 14px;
+}
+.progress-link {
+  color: var(--blue-dark);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: #83a8ae;
+  line-height: 1.8;
+}
+.progress-link:hover {
+  color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-decoration-color: currentColor;
 }
 .progress-item small {
   margin-top: 3px;
@@ -2998,7 +3028,7 @@ button:focus-visible {
   .progress-list::before {
     top: 22px;
     bottom: 35px;
-    left: 61px;
+    left: 126px;
     right: auto;
     height: auto;
     border-top: 0;
@@ -3006,7 +3036,7 @@ button:focus-visible {
   }
   .progress-list::after {
     top: 22px;
-    left: 61px;
+    left: 126px;
     right: auto;
     width: auto;
     height: 234px;
@@ -3233,9 +3263,17 @@ button:focus-visible {
     width: 100%;
   }
   .button--results {
-    min-height: 78px;
+    min-height: 112px;
     padding: 14px 20px;
-    font-size: clamp(20px, 5.6vw, 22px);
+  }
+  .button--results .results-button-context {
+    font-size: 11px;
+  }
+  .button--results .results-button-election {
+    font-size: 16px;
+  }
+  .button--results .results-button-action {
+    font-size: 22px;
   }
   .hero-visual {
     height: 440px;
@@ -3298,7 +3336,7 @@ button:focus-visible {
   }
   .progress-list::before,
   .progress-list::after {
-    left: 55px;
+    left: 107px;
   }
   .learning-section,
   .report-section,
